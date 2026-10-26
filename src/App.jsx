@@ -1,9 +1,27 @@
 import React, { useState } from 'react';
 import { 
   Trophy, Flame, Award, Timer, Share2, Check, 
-  Shield, Waves, QrCode, X, Download, Instagram
+  Shield, Waves, QrCode, X, Download
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+
+const InstagramIcon = ({ className = "w-3.5 h-3.5" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width="24" 
+    height="24" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    fill="none" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 
 const records = {
   profile: {
@@ -106,7 +124,7 @@ export default function App() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-pink-500/15 via-purple-500/15 to-orange-500/15 border border-pink-500/30 text-pink-300 text-[11px] font-medium hover:border-pink-400 transition-colors"
                 >
-                  <Instagram className="w-3.5 h-3.5 text-pink-400" />
+                  <InstagramIcon className="w-3.5 h-3.5 text-pink-400" />
                   <span>@{records.profile.instagram}</span>
                 </a>
               )}
