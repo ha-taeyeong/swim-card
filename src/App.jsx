@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Trophy, Flame, Award, Timer, Share2, Check, 
-  Shield, Waves, QrCode, X, Download
+  Shield, Waves, QrCode, X, Download, Instagram
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -11,10 +11,10 @@ const records = {
     role: "Security Engineer & Masters Swimmer",
     status: "Active Athlete & Engineer",
     teams: ["생물장다미", "CSMZ", "팀샤크"],
-    tags: ["보안솔루션"],
+    tags: ["보안솔루션", "Escort", "Nasca", "SentinelOne"],
     bio: "엔드포인트 보안 솔루션 엔지니어 & 마스터즈 수영 선수.\n안정적인 이슈 해결과 매 대회 기록 단축을 목표로 합니다.",
     url: "https://ha-taeyeong.github.io/swim-card/",
-    instagram: "tae0_workout",
+    instagram: "your_instagram_id", // 실제 인스타그램 계정 ID 입력
   },
   pbs: [
     { event: "자유형 50m", time: "29.74", rank: "4위", meet: "제6회 영등포구청장배", isSub30: true },
@@ -93,11 +93,24 @@ export default function App() {
             </span>
           </div>
 
-          {/* Name & Role (위아래 분리로 모바일 줄바꿈 원천 차단) */}
-          <div className="space-y-1">
-            <h1 className="text-3xl font-black text-white whitespace-nowrap shrink-0 block leading-tight">
-              {records.profile.name}
-            </h1>
+          {/* Name & Instagram & Role */}
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between">
+              <h1 className="text-3xl font-black text-white whitespace-nowrap shrink-0 block leading-tight">
+                {records.profile.name}
+              </h1>
+              {records.profile.instagram && (
+                <a
+                  href={`https://instagram.com/${records.profile.instagram}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-pink-500/15 via-purple-500/15 to-orange-500/15 border border-pink-500/30 text-pink-300 text-[11px] font-medium hover:border-pink-400 transition-colors"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-pink-400" />
+                  <span>@{records.profile.instagram}</span>
+                </a>
+              )}
+            </div>
             <p className="text-[12px] text-cyan-400/90 font-mono tracking-tight font-medium">
               {records.profile.role}
             </p>
