@@ -12,7 +12,7 @@ const records = {
     status: "Active Athlete & Engineer",
     teams: ["생물장다미", "CSMZ", "팀샤크"],
     tags: ["보안솔루션"],
-    bio: "엔드포인트 보안 솔루션 기술지원 엔지니어 & 마스터즈 수영 선수.\n안정적인 이슈 해결과 매 대회 기록 단축을 목표로 합니다.",
+    bio: "엔드포인트 보안 솔루션 엔지니어 & 마스터즈 수영 선수.\n안정적인 이슈 해결과 매 대회 기록 단축을 목표로 합니다.",
     url: "https://ha-taeyeong.github.io/swim-card/",
   },
   pbs: [
