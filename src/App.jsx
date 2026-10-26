@@ -14,6 +14,7 @@ const records = {
     tags: ["보안솔루션"],
     bio: "엔드포인트 보안 솔루션 엔지니어 & 마스터즈 수영 선수.\n안정적인 이슈 해결과 매 대회 기록 단축을 목표로 합니다.",
     url: "https://ha-taeyeong.github.io/swim-card/",
+    instagram: "tae0_workout",
   },
   pbs: [
     { event: "자유형 50m", time: "29.74", rank: "4위", meet: "제6회 영등포구청장배", isSub30: true },
